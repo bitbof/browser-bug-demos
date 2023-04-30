@@ -11,3 +11,6 @@ A collection of demonstrations of bugs in certain browsers.
 - chrome inconsistent pointer id in iframe https://bitbof.com/stuff/2021-02-15-iframe-pointerid-bug/
 - firefox text repositioning after scrolling
 - chrome canvas pixelated circle
+
+- link the issues
+- document: effects/severity, status
