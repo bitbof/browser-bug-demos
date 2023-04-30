@@ -49,6 +49,13 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
         <th>Issue Link</th>
     </tr>
 </thead>
+<tr>
+    <td>2023-04-30</td>
+    <td><a href="2023-04-30-safari-putimagedata">View</a></td>
+    <td>Canvas putImageData affects multiple canvases at once.</td>
+    <td>If you duplicate canvases, the putImageData method becomes unreliable. I.e. it breaks the paint bucket in Kleki/Klecks without a special workaround.</td>
+    <td>todo</td>
+</tr>
 </table>
 
 ## Firefox

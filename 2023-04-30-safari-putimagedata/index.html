@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Safari Canvas putImageData Bug</title>
+    <style>
+        canvas {
+            box-shadow: 0 0 0 1px #000;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Safari Canvas putImageData Bug</h1>
+2023-04-30<br><br>
+Steps:
+<ul>
+    <li>Create 2 canvases: canvas A, and canvas B.</li>
+    <li>Draw canvas A on canvas B.</li>
+    <li>Create ImageData with any data (here it's noise).</li>
+    <li>putImageData onto canvas A.</li>
+</ul>
+Expected: ImageData is only drawn onto canvas A.<br>
+<span style="color:red">Actual (in Safari): It is also drawn on canvas B.</span><br><br>
+Demonstration:<br>
+<script>
+    const width = 300;
+    const height = 300;
+
+    const canvasA = document.createElement('canvas');
+    canvasA.width = width;
+    canvasA.height = height;
+    const ctxA = canvasA.getContext('2d');
+
+    const canvasB = document.createElement('canvas');
+    canvasB.width = width;
+    canvasB.height = height;
+    const ctxB = canvasB.getContext('2d');
+    ctxB.drawImage(canvasA, 0, 0);
+
+    const imageData = new ImageData(width, height);
+    imageData.data.forEach((item, index) => {
+        imageData.data[index] = Math.random() * 255;
+    });
+    ctxA.putImageData(imageData, 0, 0);
+
+    document.body.append(canvasA, canvasB);
+</script>
+</body>
+</html>
