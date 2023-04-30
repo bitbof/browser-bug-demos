@@ -1,4 +1,4 @@
-A collection of demonstrations of bugs in certain browsers. Status should be fairly up-to-date.
+A collection of demonstrations of bugs in certain browsers that tend to affect drawing web apps. Status should be fairly up-to-date.
 
 Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https://bitbof.github.io/browser-bug-demos/)
 
