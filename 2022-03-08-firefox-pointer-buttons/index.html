@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FF - Pen - Pointer Events Buttons</title>
+    <style>
+        body {
+            touch-action: none;
+            user-select: none;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<p>
+    2022-03-08<br>
+    "Buttons" attribute should stay consistent when dragging with a pen on this page. Sometimes in Firefox the first pointermove after pointerdown is 0. <a href="2022_03_08_screenshot.png">Screenshot</a><br>
+    Log below:
+</p>
+<script>
+    const logEl = document.createElement('div');
+    document.body.append(logEl);
+    const outArr = [];
+
+    let isDragging = false;
+    function onPointer(e) {
+        if (e.type === 'pointerdown') {
+            outArr.push('<strong>------------------------------------------ down ------------------------------------------</strong>');
+            isDragging = true;
+        }
+        if (e.type === 'pointerup') {
+            outArr.push('<strong>------------------------------------------ up ------------------------------------------</strong>');
+            isDragging = false;
+        }
+        if (isDragging && e.buttons === 0) {
+            outArr.push(`${e.type} - pointerType: ${e.pointerType} - <span style="color:red">buttons: ${e.buttons}</span>`);
+        } else {
+            outArr.push(`${e.type} - pointerType: ${e.pointerType} - buttons: ${e.buttons}`);
+        }
+
+
+        // print
+        while (outArr.length > 50) {
+            outArr.shift();
+        }
+        logEl.innerHTML = [].concat(outArr).reverse().join('<br>');
+    }
+    window.addEventListener('pointerdown', onPointer);
+    window.addEventListener('pointermove', onPointer);
+    window.addEventListener('pointerup', onPointer);
+</script>
+</body>
+</html>

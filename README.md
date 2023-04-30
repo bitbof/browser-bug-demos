@@ -1,5 +1,17 @@
-# about
+# Browser Bug Demos
 A collection of demonstrations of bugs in certain browsers.
+
+# Not Fixed
+
+## Chrome
+- 2021-02-15-chrome-iframe-pointerid-bug
+- 2022-04-28-chrome-intelhd400-canvas
+- 2022-10-19-chrome-arc
+
+## Safari
+
+## Firefox
+- 2022-04-08-firefox-pointer-buttons
 
 # todo
 - chrome canvas glitch from https://bitbof.com/stuff/2022-04-28-intelhd400-canvas/

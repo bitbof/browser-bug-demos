@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intel HD 400 - Chrome - Canvas Bug</title>
+</head>
+<body>
+<div style="max-width: 600px">
+    <h3>Chrome Canvas Bug - with Intel HD 400 graphics</h3>
+    <span>
+        2022-04-28 - for <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1309876#c_ts1648128675">Issue 1309876: CanvasRenderingContext2D deletes parts of image after switching tabs</a><br>
+        <br>
+        Do the following steps:
+    </span>
+    <ol>
+        <li>Press "Draw Green Dot"</li>
+        <li>Switch to a different tab and come back.</li>
+        <li>Press "Draw Green Dot" again.</li>
+    </ol>
+    <span>
+        Green dots should continue to draw normally. But in Chrome on ChromeOS (and probably Linux) with Intel HD 400
+        graphics it erases the canvas where it is drawing, so the red background (via css) can shine through.
+        <a href="./screenshot.png">Screenshot</a>
+        <br>
+        <br>
+        To make drawing work normally again press "Add & Remove Draw-Canvas to DOM". The bug only occurs if the canvas was not in the DOM since the last tab switch.
+    </span>
+</div>
+<br>
+<button id="draw-btn">Draw Green Dot</button> <button id="add-btn">Add & Remove Draw-Canvas to DOM</button><br><br>
+<script>
+    // --- canvases ---
+    const size = 500;
+    // outputCanvas is the visible canvas that drawCanvas is drawn to.
+    // It has a red background, so transparency is clearly noticeable.
+    const outputCanvas = document.createElement('canvas');
+    outputCanvas.width = size;
+    outputCanvas.height = size;
+    outputCanvas.style.background = 'red';
+    document.body.append(outputCanvas);
+    const outputCtx = outputCanvas.getContext('2d');
+
+    // drawCanvas is the canvas that green circles are drawn on.
+    // initially it is filled with black
+    const drawCanvas = document.createElement('canvas');
+    drawCanvas.width = size;
+    drawCanvas.height = size;
+
+    const drawCtx = drawCanvas.getContext('2d');
+    drawCtx.fillRect(0, 0, size, size);
+
+    function drawToOutput() {
+        outputCtx.clearRect(0, 0, size, size);
+        outputCtx.drawImage(drawCanvas, 0, 0);
+    }
+    drawToOutput();
+
+    function drawGreenDot(x, y) {
+        drawCtx.fillStyle = 'rgba(0, 255, 0, 0.5)';
+        drawCtx.beginPath();
+        drawCtx.arc(x, y, 50, 0, 2 * Math.PI);
+        drawCtx.fill();
+
+        drawToOutput();
+    }
+
+    // --- buttons ---
+    const drawBtn = document.getElementById('draw-btn');
+    const addBtn = document.getElementById('add-btn');
+
+    drawBtn.onclick = () => {
+        drawGreenDot(Math.random() * size, Math.random() * size);
+    };
+
+    addBtn.onclick = () => {
+        document.body.append(drawCanvas);
+        setTimeout(() => {
+            document.body.removeChild(drawCanvas);
+        }, 0);
+    };
+
+</script>
+</body>
+</html>

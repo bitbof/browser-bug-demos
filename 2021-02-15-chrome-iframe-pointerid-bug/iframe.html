@@ -1,0 +1,26 @@
+﻿<style>
+    body, html {
+        touch-action: none;
+    }
+</style>
+- open site with chrome<br>
+- drag with stylus -> pointer id stays consistent<br>
+- resize window<br>
+- drag with stylus -> pointer id different while pressed (if not, resize again)<br>
+<br>
+<script>
+    let out = document.createElement('div');
+    out.style.userSelect = 'none';
+    document.body.appendChild(out);
+    let outArr = [];
+    function onPointer(event) {
+        outArr.unshift(event.pointerId + ' ' + event.pointerType + ' ' + event.type);
+        if (outArr.length > 100) {
+            outArr.pop();
+        }
+        out.innerHTML = outArr.join('<br>');
+    }
+    document.body.addEventListener('pointerdown', onPointer);
+    document.body.addEventListener('pointermove', onPointer);
+    document.body.addEventListener('pointerup', onPointer);
+</script>

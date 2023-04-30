@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Context2d Arc - Chrome issue</title>
+    <style>
+        canvas, svg {
+            border: 1px solid #000;
+            image-rendering: pixelated;
+        }
+
+        .canvas-row {
+            display: flex;
+        }
+
+        .canvas-row > * {
+            width: 150px;
+            text-align: center;
+        }
+
+        p {
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+<p>
+    2022-10-23 (<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1377687">chromium issue</a>)<br>
+    Below, a circle is drawn in 3 different ways. Left: Via SVG. Middle: Using the arc method of Context2d. Right:
+    Drawing a serialized SVG on a canvas.
+    <br>
+    <br>
+    <strong>Expected</strong>: Context2d arc and SVG drawn on Canvas should have the same or similar quality. On a screen with devicePixelRatio > 1
+    the SVG circle on the left will have the highest quality. (<a href="./2022-10-23-circle-safari-macos.png">Screenshot</a>)
+    <br>
+    <br>
+    <span style="color: red">
+        <strong>Actual</strong>: In Chrome (106.0.5249.119) on MacOS (12.4, M1, 2020) the middle circle looks jagged. It is
+        visibly worse than the right one. (<a href="./2022-10-23-circle-chrome-macos.png">Screenshot</a>)
+    </span>
+</p>
+<label>Radius: <input id="radius" type="range" value="20" min="1" max="50"></label>
+<br>
+<label>X-offset: <input id="xOffset" type="range" value="50" min="0" max="100"></label>
+<br>
+<label>Y-offset: <input id="yOffset" type="range" value="50" min="0" max="100"></label>
+<br>
+<br>
+<div id="settings"></div>
+<br>
+<div class="canvas-row">
+    <div>
+        <svg id="svg" width="100" height="100">
+            <circle id="circle" cx="50" cy="50" r="12"></circle>
+        </svg>
+        <br>SVG
+    </div>
+    <div>
+        <canvas id="canvas1" width="100" height="100"></canvas>
+        <br>Context2d Arc
+    </div>
+    <div>
+        <canvas id="canvas2" width="100" height="100"></canvas>
+        <br>SVG drawn on Canvas
+    </div>
+</div>
+
+<script>
+    const radiusSlider = document.getElementById('radius');
+    const xSlider = document.getElementById('xOffset');
+    const ySlider = document.getElementById('yOffset');
+    const settingsOutput = document.getElementById('settings');
+
+    const svgEl = document.getElementById('svg');
+    const circleEl = document.getElementById('circle');
+
+    const canvasMiddle = document.getElementById('canvas1');
+    const ctxMiddle = canvasMiddle.getContext('2d');
+
+    const canvasRight = document.getElementById('canvas2');
+    const ctxRight = canvasRight.getContext('2d');
+
+    const width = canvasMiddle.width;
+    const height = canvasMiddle.height;
+
+    function update() {
+        const radius = Number(radiusSlider.value);
+        const xOffset = Number(xSlider.value) / 100;
+        const yOffset = Number(ySlider.value) / 100;
+
+        // svg
+        circleEl.setAttribute('cx', '' + (width / 2 + xOffset));
+        circleEl.setAttribute('cy', '' + (height / 2 + yOffset));
+        circleEl.setAttribute('r', '' + radius);
+
+        // middle canvas
+        ctxMiddle.clearRect(0, 0, width, height);
+        ctxMiddle.beginPath();
+        ctxMiddle.arc(width / 2 + xOffset, height / 2 + yOffset, radius, 0, 2 * Math.PI);
+        ctxMiddle.fill();
+
+        // right canvas
+        const xml = new XMLSerializer().serializeToString(svgEl);
+        const svg64 = btoa(xml);
+        const b64Start = 'data:image/svg+xml;base64,';
+        const image64 = b64Start + svg64;
+        const img = new Image();
+        img.onload = function () {
+            ctxRight.clearRect(0, 0, width, height);
+            ctxRight.drawImage(img, 0, 0);
+        }
+        img.src = image64;
+
+        settingsOutput.innerHTML = `radius: ${radius}&nbsp&nbsp x-offset: ${xOffset}&nbsp&nbsp y-offet: ${yOffset}`;
+    }
+
+    update();
+    radiusSlider.onchange = update;
+    radiusSlider.oninput = update;
+    xSlider.onchange = update;
+    xSlider.oninput = update;
+    ySlider.onchange = update;
+    ySlider.oninput = update;
+</script>
+</body>
+</html>
