@@ -12,5 +12,7 @@ A collection of demonstrations of bugs in certain browsers.
 - firefox text repositioning after scrolling
 - chrome canvas pixelated circle
 
+.
+
 - link the issues
 - document: effects/severity, status
