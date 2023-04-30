@@ -52,9 +52,9 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
 <tr>
     <td>2023-04-30</td>
     <td><a href="2023-04-30-safari-putimagedata">View</a></td>
-    <td>Canvas putImageData affects multiple canvases at once.</td>
+    <td>Canvas putImageData draws onto wrong canvas.</td>
     <td>If you duplicate canvases, the putImageData method becomes unreliable. I.e. it breaks the paint bucket in Kleki/Klecks without a special workaround.</td>
-    <td>todo</td>
+    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=256151">WebKit Bugzilla Ticket</a> (reported on 2023-04-30)</td>
 </tr>
 </table>
 
