@@ -26,7 +26,7 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td>2022-04-28</td>
     <td><a href="2022-04-28-chrome-intelhd400-canvas">View</a></td>
     <td>CanvasRenderingContext2D deletes parts of image after switching tabs.</td>
-    <td>With certain hardware, drawing apps or image editing apps can't reliably run, as image data gets corrupted, when switching tabs. I.e. Kleki/Klecks users lose progress.</td>
+    <td>With certain hardware, drawing apps or image editing apps aren't reliable, as image data gets corrupted when switching tabs. I.e. Kleki/Klecks users lose progress.</td>
     <td><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1309876">Chromium Ticket</a> (reported 2022-03-24)</td>
 </tr>
 <tr>
