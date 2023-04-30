@@ -1,7 +1,6 @@
-# Browser Bug Demos
 A collection of demonstrations of bugs in certain browsers. Status should be fairly up-to-date.
 
-Visit here for easy viewing: [bitbof.github.io/browser-bug-demos](https://bitbof.github.io/browser-bug-demos/)
+Visit here for easy viewing fo demos: [bitbof.github.io/browser-bug-demos](https://bitbof.github.io/browser-bug-demos/)
 
 # <span style="color:red">Not Fixed</span>
 
