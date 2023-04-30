@@ -1,12 +1,14 @@
 # Browser Bug Demos
 A collection of demonstrations of bugs in certain browsers.
 
+Visit here for easy viewing: [bitbof.github.io/browser-bug-demos](https://bitbof.github.io/browser-bug-demos/)
+
 # Not Fixed
 
 ## Chrome
-- 2021-02-15-chrome-iframe-pointerid-bug
-- 2022-04-28-chrome-intelhd400-canvas
-- 2022-10-19-chrome-arc
+- [2021-02-15-chrome-iframe-pointerid-bug](2021-02-15-chrome-iframe-pointerid-bug)
+- [2022-04-28-chrome-intelhd400-canvas](2022-04-28-chrome-intelhd400-canvas)
+- [2022-10-19-chrome-arc](2022-10-19-chrome-arc)
 
 ## Safari
 
