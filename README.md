@@ -81,7 +81,6 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
 # todo
 - chrome invert artifacts https://github.com/bitbof/klecks/issues/8
 - safari canvas gradient -> webgl glitch https://github.com/bitbof/klecks/issues/41
-- safari canvas duplication glitch https://github.com/bitbof/klecks/issues/68
 - chrome disappearing cursor with pen (need demo?)
 - firefox text repositioning after scrolling
 
