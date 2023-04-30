@@ -9,3 +9,4 @@ A collection of demonstrations of bugs in certain browsers.
 - safari canvas duplication glitch https://github.com/bitbof/klecks/issues/68
 - chrome disappearing cursor with pen (need demo?)
 - chrome inconsistent pointer id in iframe https://bitbof.com/stuff/2021-02-15-iframe-pointerid-bug/
+- firefox text repositioning after scrolling
