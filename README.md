@@ -83,6 +83,8 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
 - safari canvas gradient -> webgl glitch https://github.com/bitbof/klecks/issues/41
 - chrome disappearing cursor with pen (need demo?)
 - firefox text repositioning after scrolling
+- safari apple pencil pressure very high in first event?
+- chrome after lifting stylus one pointerevent in position of pointerdown?
 
 
 
