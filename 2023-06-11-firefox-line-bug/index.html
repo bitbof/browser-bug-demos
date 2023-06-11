@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>firefox canvas line bug</title>
+    <style>
+        canvas {
+            box-shadow: 0 0 0 1px black;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="700" height="326"></canvas>
+<script>
+    const line = [[650,132],[531,160],[593,228]];
+    const ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.globalCompositeOperation = 'difference';
+    ctx.beginPath();
+    ctx.moveTo(line[0][0], line[0][1]);
+    for (let i = 1; i < line.length; i++) {
+        ctx.lineTo(line[i][0], line[i][1]);
+    }
+    ctx.strokeStyle = 'white';
+    ctx.stroke();
+</script>
+</body>
+</html>

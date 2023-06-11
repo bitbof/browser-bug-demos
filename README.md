@@ -83,6 +83,13 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td>Drawing applications break, unless they handle Firefox differently (not trust the button attribute).</td>
     <td><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1758516">Bugzilla Ticket</a> (reported 2022-03-08)</td>
 </tr>
+<tr>
+    <td>2023-06-11</td>
+    <td><a href="2023-06-11-firefox-line-bug">View</a></td>
+    <td>Visual glitches in canvas when drawing a line.</td>
+    <td>Drawing applications will draw glitchy strokes on Windows.</td>
+    <td></td>
+</tr>
 </table>
 
 # todo
