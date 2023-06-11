@@ -88,7 +88,7 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td><a href="2023-06-11-firefox-line-bug">View</a></td>
     <td>Visual glitches in canvas when drawing a line.</td>
     <td>Drawing applications will draw glitchy strokes on Windows.</td>
-    <td></td>
+    <td><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1837870">Bugzilla Ticket</a> (reported 2023-06-11)</td>
 </tr>
 </table>
 
