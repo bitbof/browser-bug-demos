@@ -96,7 +96,7 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td>kleki.com</td>
     <td>canvas.context('webgl') fails on Chrome OS on some pages (not on all devices)</td>
     <td>Features relying on WebGL do not work (filters in Kleki/Klecks)</td>
-    <td><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1443160">Chromium Ticket</a> (reported 2023-05-06)</td>
+    <td><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1443160">Chromium Ticket</a> (reported 2023-05-06, fixed 2023-06-14)</td>
 </tr>
 </table>
 
@@ -116,7 +116,7 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td><a href="2023-04-30-safari-putimagedata">View</a></td>
     <td>Canvas putImageData draws onto wrong canvas.</td>
     <td>If you duplicate canvases, the putImageData method becomes unreliable. I.e. it breaks the paint bucket in Kleki/Klecks without a special workaround.</td>
-    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=256151">WebKit Bugzilla Ticket</a> (reported on 2023-04-30)</td>
+    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=256151">WebKit Bugzilla Ticket</a> (reported on 2023-04-30, fixed 2023-05-11)</td>
 </tr>
 </table>
 
