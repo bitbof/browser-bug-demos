@@ -76,6 +76,13 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td>Drawing applications will draw glitchy strokes on Windows.</td>
     <td><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1837870">Bugzilla Ticket</a> (reported 2023-06-11)</td>
 </tr>
+<tr>
+    <td>2023-11-03</td>
+    <td><a href="2023-11-03-firefox-canvas-alpha">View</a></td>
+    <td>globalCompositeOperation makes canvas without alpha channel transparent</td>
+    <td>Higher memory use, and slower rendering.</td>
+    <td><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1862925">Bugzilla Ticket</a> (reported 2023-11-03)</td>
+</tr>
 </table>
 
 
