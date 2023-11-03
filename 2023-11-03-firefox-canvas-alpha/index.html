@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Firefox Canvas Alpha Bug on Mac</title>
+</head>
+<body>
+<p>
+    If drawn correctly it should be a black square.
+</p>
+<canvas id="canvas" width="300" height="300" style="background: red"></canvas>
+<script>
+    const ctx = canvas.getContext('2d', {alpha: false});
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.fillRect(100, 100, 100, 100);
+</script>
+</body>
+</html>
