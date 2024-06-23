@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Context2d - small arcs - Chrome issue</title>
+    <style>
+        canvas {
+            image-rendering: pixelated;
+            box-shadow: 0 0 0 1px #000;
+            width: calc(30px * 20);
+            height: calc(15px * 20);
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<p>
+    2024-06-23<br>
+    Below, a number of circles with a radius of 0.8 are drawn.<br>
+    They should look like this (Firefox): <a href="arc-firefox.png">image</a><br>
+    In Chrome they appear like this: <a href="arc-chrome.png">image</a>
+</p>
+<canvas id="canvas" width="30" height="15"></canvas>
+<script>
+    const ctx = canvas.getContext("2d");
+    const inputs = [
+        [3.1849838634549243, 3.2143438424808757, 0.8],
+        [8.493229305433257, 4.5414052029754615, 0.8],
+        [14.44212505937449, 2.6652150036555327, 0.8],
+        [19.20124166252748, 5.548141407488593, 0.8],
+        [24.006119002249243, 3.6719512081686645, 0.8],
+        [4.145959331399277, 9.986932854660129, 0.8],
+        [10.598223187597078, 11.72584084427372, 0.8],
+        [15.22005758104373, 10.124215064366464, 0.8],
+        [20.16221713047183, 11.313994215154711, 0.8],
+        [24.28068342166192, 10.62758316662303, 0.8],
+    ];
+    inputs.forEach((item) => {
+        ctx.beginPath();
+        ctx.arc(item[0], item[1], item[2], 0, Math.PI * 2);
+        ctx.fill();
+    });
+
+    ctx.fill();
+</script>
+</body>
+</html>
