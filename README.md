@@ -19,7 +19,7 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td>2021-02-15</td>
     <td><a href="2021-02-15-chrome-iframe-pointerid-bug">View</a></td>
     <td>In an iframe, when using a stylus, PointerEvent.pointerId is inconsistent.</td>
-    <td>Drawing applications can't reliably run in iframes. I.e. Kleki/Klecks can't be easily embedded via iframe.</td>
+    <td>Drawing applications can't reliably run in iframes. I.e. Kleki/Klecks can't be embedded via iframe without glitching.</td>
     <td><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1178643">Chromium Ticket</a> (reported 2021-02-15)</td>
 </tr>
 <tr>
