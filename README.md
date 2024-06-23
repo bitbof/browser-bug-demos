@@ -43,6 +43,13 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td>Applications relying on the canvas arc method achieve bad quality circles. I.e. the pen tool in Kleki/Klecks looks much worse.</td>
     <td><a href="https://issues.chromium.org/issues/348683485">Chromium Ticket</a> (reported 2024-06-23)</td>
 </tr>
+<tr>
+    <td>2024-06-23</td>
+    <td>no demo</td>
+    <td>Cursor disappears with Windows Ink</td>
+    <td>Seeing no cursor worsens visual feedback for stylus users.</td>
+    <td><a href="https://issues.chromium.org/issues/348869917">Chromium Ticket</a> (reported 2024-06-23)</td>
+</tr>
 </table>
 
 ## Safari
