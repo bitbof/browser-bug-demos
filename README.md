@@ -41,7 +41,7 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td><a href="2024-06-23-chrome-small-arc">View</a></td>
     <td>Context2d arc() fill() draws strange shapes for small radii.</td>
     <td>Applications relying on the canvas arc method achieve bad quality circles. I.e. the pen tool in Kleki/Klecks looks much worse.</td>
-    <td><a href="">Chromium Ticket</a> (reported 2024-06-23)</td>
+    <td><a href="https://issues.chromium.org/issues/348683485">Chromium Ticket</a> (reported 2024-06-23)</td>
 </tr>
 </table>
 
