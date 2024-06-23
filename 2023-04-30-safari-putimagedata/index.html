@@ -36,7 +36,7 @@ Demonstration:<br>
     canvasB.width = width;
     canvasB.height = height;
     const ctxB = canvasB.getContext('2d');
-    ctxB.putImageData(ctxA.getImageData(0, 0, width, height), 0, 0);
+    ctxB.drawImage(canvasA, 0, 0);
 
     const imageData = new ImageData(width, height);
     imageData.data.forEach((item, index) => {
