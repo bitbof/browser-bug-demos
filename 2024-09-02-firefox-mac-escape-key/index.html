@@ -7,20 +7,20 @@
 <body>
 <h1>Firefox escape key bug on macOS</h1>
 <p>
-    2024-09-02<br>
+    2024-09-02 - <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1916279">bug report</a><br>
     <br>
     <span style="font-weight: bold;">Steps:</span><br>
-    - On macOS, open Firefox<br>
+    - On macOS, open this page in Firefox<br>
     - "Enter Full Screen" - via green window button or Shift + Cmd + F<br>
     - Press the escape key<br>
 </p>
 <p>
     <span style="color: green; font-weight: bold;">Expected:</span><br>
-    - Fires escape down and up
+    - Fires keydown and keyup for escape key
 </p>
 <p>
     <span style="color: red; font-weight: bold;">Actual:</span><br>
-    - Does not fire escape up
+    - Does not fire keyup for escape key
 </p>
 <p>
     You can reproduce the bug with the event logger below:
