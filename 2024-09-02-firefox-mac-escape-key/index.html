@@ -29,10 +29,10 @@
 
 </p>
 <script>
-    document.addEventListener('keydown', (e) => {
+    window.addEventListener('keydown', (e) => {
         log.innerHTML = 'Keydown ' + e.code + '<br>' + log.innerHTML;
     });
-    document.addEventListener('keyup', (e) => {
+    window.addEventListener('keyup', (e) => {
         log.innerHTML = 'Keyup ' + e.code + '<br>' + log.innerHTML;
     });
 </script>
