@@ -97,6 +97,13 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td>Higher memory use, and slower rendering.</td>
     <td><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1862925">Bugzilla Ticket</a> (reported 2023-11-03)</td>
 </tr>
+<tr>
+    <td>2024-09-02</td>
+    <td><a href="2024-09-02-firefox-mac-escape-key">View</a></td>
+    <td>On maxOS, while fullscreen, pressing the escape key will not fire keyup</td>
+    <td>Breaks logic which assumes that key events are reliable</td>
+    <td><a href="">Bugzilla Ticket</a> (reported todo)</td>
+</tr>
 </table>
 
 
