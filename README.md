@@ -93,7 +93,7 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
 <tr>
     <td>2024-09-02</td>
     <td><a href="2024-09-02-firefox-mac-escape-key">View</a></td>
-    <td>On maxOS, while fullscreen, pressing the escape key will not fire keyup</td>
+    <td>On macOS, while fullscreen, pressing the escape key will not fire keyup</td>
     <td>Breaks logic which assumes that key events are reliable</td>
     <td><a href="">Bugzilla Ticket</a> (reported todo)</td>
 </tr>
