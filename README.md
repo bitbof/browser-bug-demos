@@ -38,13 +38,6 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
 </tr>
 <tr>
     <td>2024-06-23</td>
-    <td><a href="2024-06-23-chrome-small-arc">View</a></td>
-    <td>Context2d arc() fill() draws strange shapes for small radii.</td>
-    <td>Applications relying on the canvas arc method achieve bad quality circles. I.e. the pen tool in Kleki/Klecks looks much worse.</td>
-    <td><a href="https://issues.chromium.org/issues/348683485">Chromium Ticket</a> (reported 2024-06-23)</td>
-</tr>
-<tr>
-    <td>2024-06-23</td>
     <td>no demo</td>
     <td>Cursor disappears with Windows Ink</td>
     <td>Seeing no cursor worsens visual feedback for stylus users.</td>
@@ -119,6 +112,13 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
         <th>Issue Link</th>
     </tr>
 </thead>
+<tr>
+    <td>2024-06-23</td>
+    <td><a href="2024-06-23-chrome-small-arc">View</a></td>
+    <td>Context2d arc() fill() draws strange shapes for small radii.</td>
+    <td>Applications relying on the canvas arc method achieve bad quality circles. I.e. the pen tool in Kleki/Klecks looks much worse.</td>
+    <td><a href="https://issues.chromium.org/issues/348683485">Chromium Ticket</a> (reported 2024-06-23, fixed 2024-07-24 in Chrome 127)</td>
+</tr>
 <tr>
     <td>2023-05-06</td>
     <td>kleki.com</td>
