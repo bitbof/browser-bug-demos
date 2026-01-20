@@ -63,6 +63,13 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td>Breaks logic which assumes that key events are reliable</td>
     <td><a href="https://bugs.webkit.org/show_bug.cgi?id=279030">WebKit Bugzilla Ticket</a> (reported 2024-09-02)</td>
 </tr>
+<tr>
+    <td>2026-01-20</td>
+    <td><a href="2026-01-20-safari-pointer-leave">View</a></td>
+    <td>On iPad or iPhone the pointerleave event does not always fire</td>
+    <td>Breaks JS-based hover logic in certain scenarios</td>
+    <td><a href="">WebKit Bugzilla Ticket</a> (todo)</td>
+</tr>
 </table>
 
 ## Firefox
