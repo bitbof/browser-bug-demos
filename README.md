@@ -68,7 +68,7 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td><a href="2026-01-20-safari-pointer-leave">View</a></td>
     <td>On iPad or iPhone the pointerleave event does not always fire</td>
     <td>Breaks JS-based hover logic in certain scenarios</td>
-    <td><a href="">WebKit Bugzilla Ticket</a> (todo)</td>
+    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=305856">WebKit Bugzilla Ticket</a> (reported 2026-01-20)</td>
 </tr>
 </table>
 
