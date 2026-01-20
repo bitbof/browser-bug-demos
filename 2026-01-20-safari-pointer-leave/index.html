@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bug Report - Pointer Leave does not fire on iPad/iPhone in 26.2</title>
+    <title>Bug Report - pointerenter/pointerleave on iPad/iPhone in 26.2</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -52,8 +52,8 @@
 <body>
     <h1>Bug Report: Pointer Events Test</h1>
     <p>Element B sits on top of Element A. Click on B to make it disappear.</p>
-    <p>Element A displays the last pointer event (either pointerenter or pointerleave).</p>
-    <p>Expected: After tapping on B, B disappears and A displays "last event: pointerleave".</p>
+    <p>Element A displays the last pointer event (none, pointerenter, or pointerleave).</p>
+    <p>Expected (on a touch device): After tapping on B, B disappears and A displays "last event: none".</p>
 
     <div class="container">
         <div id="elementA">
