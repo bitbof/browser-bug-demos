@@ -70,13 +70,6 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td>Breaks JS-based hover logic in certain scenarios</td>
     <td><a href="https://bugs.webkit.org/show_bug.cgi?id=305856">WebKit Bugzilla Ticket</a> (reported 2026-01-20)</td>
 </tr>
-<tr>
-    <td>2026-01-21</td>
-    <td><a href="2026-01-21-safari-invert">View</a></td>
-    <td>invert() not working on SVG with feGaussianBlur</td>
-    <td>Images render incorrectly</td>
-    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=305974">WebKit Bugzilla Ticket</a> (reported 2026-01-21)</td>
-</tr>
 </table>
 
 ## Firefox
@@ -166,6 +159,13 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td>Canvas putImageData draws onto wrong canvas.</td>
     <td>If you duplicate canvases, the putImageData method becomes unreliable. I.e. it breaks the paint bucket in Kleki/Klecks without a special workaround.</td>
     <td><a href="https://bugs.webkit.org/show_bug.cgi?id=256151">WebKit Bugzilla Ticket</a> (reported on 2023-04-30, fixed 2023-05-11)</td>
+</tr>
+<tr>
+    <td>2026-01-21</td>
+    <td><a href="2026-01-21-safari-invert">View</a></td>
+    <td>invert() not working on SVG with feGaussianBlur</td>
+    <td>Images render incorrectly</td>
+    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=305974">WebKit Bugzilla Ticket</a> (reported 2026-01-21)</td>
 </tr>
 </table>
 
