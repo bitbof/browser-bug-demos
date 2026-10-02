@@ -1,8 +1,8 @@
-This repo demonstrates some browser bugs that tend to affect drawing web apps the most. Status should be fairly up-to-date.
+This repo demonstrates some browser bugs that tend to affect drawing web apps the most. Issue statuses last checked on 2026-10-03.
 
 Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https://bitbof.github.io/browser-bug-demos/)
 
-# <span style="color:red">Not Fixed</span>
+# <span style="color:red">No Fix Confirmed</span>
 
 ## Chrome
 <table>
@@ -20,21 +20,21 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td><a href="2021-02-15-chrome-iframe-pointerid-bug">View</a></td>
     <td>In an iframe, when using a stylus, PointerEvent.pointerId is inconsistent.</td>
     <td>Drawing applications can't reliably run in iframes. I.e. Kleki/Klecks can't be embedded via iframe without glitching.</td>
-    <td><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1178643">Chromium Ticket</a> (reported 2021-02-15)</td>
+    <td><a href="https://issues.chromium.org/issues/40749260">Chromium Ticket</a> (reported 2021-02-15)</td>
 </tr>
 <tr>
     <td>2022-04-28</td>
     <td><a href="2022-04-28-chrome-intelhd400-canvas">View</a></td>
     <td>CanvasRenderingContext2D deletes parts of image after switching tabs.</td>
     <td>With certain hardware, drawing apps or image editing apps aren't reliable, as image data gets corrupted when switching tabs. I.e. Kleki/Klecks users lose progress.</td>
-    <td><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1309876">Chromium Ticket</a> (reported 2022-03-24)</td>
+    <td><a href="https://issues.chromium.org/issues/40830051">Chromium Ticket</a> (reported 2022-03-24)</td>
 </tr>
 <tr>
     <td>2022-10-19</td>
     <td><a href="2022-10-19-chrome-arc">View</a></td>
     <td>Context2d arc() fill() draws jagged circles on MacOS M1.</td>
     <td>Applications relying on the canvas arc method achieve bad quality circles. I.e. the pen tool in Kleki/Klecks looks much worse.</td>
-    <td><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1377687">Chromium Ticket</a> (reported 2022-10-23)</td>
+    <td><a href="https://issues.chromium.org/issues/40874484">Chromium Ticket</a> (reported 2022-10-23)</td>
 </tr>
 <tr>
     <td>2024-06-23</td>
@@ -64,11 +64,11 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td><a href="https://bugs.webkit.org/show_bug.cgi?id=279030">WebKit Bugzilla Ticket</a> (reported 2024-09-02)</td>
 </tr>
 <tr>
-    <td>2026-01-20</td>
-    <td><a href="2026-01-20-safari-pointer-leave">View</a></td>
-    <td>On iPad or iPhone pointerenter/pointerleave does not fire correctly</td>
-    <td>Breaks JS-based hover logic in certain scenarios</td>
-    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=305856">WebKit Bugzilla Ticket</a> (reported 2026-01-20)</td>
+    <td>2026-10-03</td>
+    <td><a href="2026-10-03-safari-gradient-webgl">View</a></td>
+    <td>Color-to-transparent Canvas 2D gradients develop pixel artifacts after a WebGL round trip in Safari.</td>
+    <td>Gradients can lead to corrupted image data when interacting with WebGL.</td>
+    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=todo">WebKit Bugzilla Ticket</a> (reported todo)</td>
 </tr>
 </table>
 
@@ -138,7 +138,7 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td>kleki.com</td>
     <td>canvas.context('webgl') fails on Chrome OS on some pages (not on all devices)</td>
     <td>Features relying on WebGL do not work (filters in Kleki/Klecks)</td>
-    <td><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1443160">Chromium Ticket</a> (reported 2023-05-06, fixed 2023-06-14)</td>
+    <td><a href="https://issues.chromium.org/issues/40267262">Chromium Ticket</a> (reported 2023-05-06, fixed 2023-06-14)</td>
 </tr>
 </table>
 
@@ -161,11 +161,18 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td><a href="https://bugs.webkit.org/show_bug.cgi?id=256151">WebKit Bugzilla Ticket</a> (reported on 2023-04-30, fixed 2023-05-11)</td>
 </tr>
 <tr>
+    <td>2026-01-20</td>
+    <td><a href="2026-01-20-safari-pointer-leave">View</a></td>
+    <td>On iPad or iPhone pointerenter/pointerleave does not fire correctly</td>
+    <td>Breaks JS-based hover logic in certain scenarios</td>
+    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=305856">WebKit Bugzilla Ticket</a> (reported 2026-01-20; duplicate of <a href="https://bugs.webkit.org/show_bug.cgi?id=304955">WebKit #304955</a>, fixed upstream 2026-01-13; fix available in iOS 26.4 Beta 1 according to the maintainer)</td>
+</tr>
+<tr>
     <td>2026-01-21</td>
     <td><a href="2026-01-21-safari-invert">View</a></td>
     <td>invert() not working on SVG with feGaussianBlur</td>
     <td>Images render incorrectly</td>
-    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=305974">WebKit Bugzilla Ticket</a> (reported 2026-01-21, fixed 2025-02-11)</td>
+    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=305974">WebKit Bugzilla Ticket</a> (reported 2026-01-21; confirmed working in Safari 26.3 on 2026-02-20; resolved CONFIGURATION CHANGED)</td>
 </tr>
 </table>
 
@@ -186,7 +193,6 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
 
 # todo
 - chrome invert artifacts https://github.com/bitbof/klecks/issues/8
-- safari canvas gradient -> webgl glitch https://github.com/bitbof/klecks/issues/41
 - firefox text repositioning after scrolling
 - safari apple pencil pressure very high in first event?
 - chrome after lifting stylus one pointerevent in position of pointerdown?
