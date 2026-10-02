@@ -68,7 +68,7 @@ Visit here for easy viewing of demos: [bitbof.github.io/browser-bug-demos](https
     <td><a href="2026-10-03-safari-gradient-webgl">View</a></td>
     <td>Color-to-transparent Canvas 2D gradients develop pixel artifacts after a WebGL round trip in Safari.</td>
     <td>Gradients can lead to corrupted image data when interacting with WebGL.</td>
-    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=todo">WebKit Bugzilla Ticket</a> (reported todo)</td>
+    <td><a href="https://bugs.webkit.org/show_bug.cgi?id=326151">WebKit Bugzilla Ticket</a> (reported 2026-10-03)</td>
 </tr>
 </table>
 
